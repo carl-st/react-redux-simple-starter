@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,200,500,700');
+
+// Color palette
+$mindaro: #D8F793;
+$etonBlue: #A0CA92;
+$background: #FBFBFB;
+$greenSheen: #75B09C;
+$darkTan: #998650;
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: $background;
+}
+
+.link {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.content {
+    margin: 40px;
+}
