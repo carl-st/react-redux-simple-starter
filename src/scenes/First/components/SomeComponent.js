@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { someComponentStrings } from './../../../constants';
 import './SomeComponent.scss';
 
 class SomeComponent extends Component {
@@ -8,12 +9,13 @@ class SomeComponent extends Component {
     }
 
     render() {
-        const { isLoading, greeting, onClick } = this.props;
+        const { isLoading, onClick } = this.props;
+        const { on, off } = someComponentStrings;
         return (
             <Fragment>
-                <div onClick={onClick}>
-                    {greeting}
-                </div>
+                <button onClick={onClick}>
+                    {isLoading ? on : off}
+                </button>
                 {isLoading && <div className='loader' />}
             </Fragment>
         );
@@ -21,7 +23,6 @@ class SomeComponent extends Component {
 }
 
 SomeComponent.propTypes = {
-    greeting: PropTypes.string,
     isLoading: PropTypes.bool,
     onClick: PropTypes.func.isRequired
 };

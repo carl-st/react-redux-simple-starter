@@ -8,7 +8,7 @@ const initialState = Object.assign({}, {
 
 const main = (state = initialState, action) => {
     switch (action.type) {
-        case actionTypes.IS_LOADING:
+        case actionTypes.SET_LOADING:
             return {
                 ...state,
                 isLoading: action.loading

@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import './../../styles/main.scss';
+import { notFoundStrings } from '../../constants';
 
 class NotFoundContainer extends Component {
     constructor(props) {
@@ -11,7 +12,7 @@ class NotFoundContainer extends Component {
     render() {
         return (
             <Fragment>
-                404: This is not the page you are looking for.
+                {notFoundStrings.title}
             </Fragment>
         );
     }

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { secondContainerStrings } from './../../constants';
 import './../../styles/main.scss';
 
 class SecondContainer extends Component {
@@ -11,7 +12,7 @@ class SecondContainer extends Component {
     render() {
         return (
             <Fragment>
-                Second Container
+                {secondContainerStrings.title}
             </Fragment>
         );
     }

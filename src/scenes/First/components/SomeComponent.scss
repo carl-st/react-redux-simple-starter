@@ -5,6 +5,13 @@
     100% { transform: rotate(360deg); }
 }
 
+button {
+    border: none;
+    border-radius: 4px;
+    background-color: $mindaro;
+    margin: 2px;
+}
+
 .loader {
     border: 6px solid $mindaro; 
     border-top: 6px solid $greenSheen;

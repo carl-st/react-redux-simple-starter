@@ -1,13 +1,13 @@
 const actionTypes = {
-    IS_LOADING: 'IS_LOADING'
+    SET_LOADING: 'SET_LOADING'
 };
 
-const isLoading = loading => ({
-    type: actionTypes.IS_LOADING,
+const setLoading = loading => ({
+    type: actionTypes.SET_LOADING,
     loading
 });
 
 export {
     actionTypes,
-    isLoading
+    setLoading
 };

@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { isLoading as setLoading } from './../../utils/actions';
+import { setLoading } from './../../utils/actions';
 import { SomeComponent } from './components';
+import { firstContainerStrings } from '../../constants';
 import './../../styles/main.scss';
 
 class FirstContainer extends Component {
@@ -11,8 +12,8 @@ class FirstContainer extends Component {
     }
 
     handleOnClick = () => {
-        const { dispatch } = this.props;
-        dispatch(setLoading(true));
+        const { setLoadingState, isLoading } = this.props;
+        setLoadingState(!isLoading);
     }
 
     render() {
@@ -20,8 +21,8 @@ class FirstContainer extends Component {
         return (
             <Fragment>
                 <div className='content'>
+                    {firstContainerStrings.clickInfo}
                     <SomeComponent
-                        greeting='Hello!'
                         isLoading={isLoading}
                         onClick={this.handleOnClick}
                     />
@@ -33,8 +34,14 @@ class FirstContainer extends Component {
 }
 
 FirstContainer.propTypes = {
-    dispatch: PropTypes.func.isRequired,
-    isLoading: PropTypes.bool
+    isLoading: PropTypes.bool,
+    setLoadingState: PropTypes.func
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        setLoadingState: loadingState => dispatch(setLoading(loadingState))
+    };
 };
 
 const mapStateToProps = ({ main }) => {
@@ -43,4 +50,4 @@ const mapStateToProps = ({ main }) => {
     };
 };
 
-export default connect(mapStateToProps)(FirstContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FirstContainer);
