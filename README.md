@@ -1,5 +1,5 @@
-# react-redux-simple-starter
-Simple application and a good point to start development with React.
+# React Redux Simple Starter
+It's a sample application kit and a good point to start development with React.
 State management is handled by Redux, styles are easy to maintain with scss separated from JS files.
 All of files are bundled with preconfigured Webpack and the app can be tested with Jest and Enzyme.
 
