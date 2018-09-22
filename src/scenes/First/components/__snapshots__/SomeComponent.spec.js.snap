@@ -2,8 +2,10 @@
 
 exports[`<SomeComponent /> renders correctly with provided props 1`] = `
 <React.Fragment>
-  <div
+  <button
     onClick={[Function]}
-  />
+  >
+    Off
+  </button>
 </React.Fragment>
 `;

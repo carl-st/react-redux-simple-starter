@@ -5,9 +5,7 @@ import { SomeComponent } from ".";
 
 describe('<SomeComponent />', () => {
     const props = {
-        image: 'http://example.com/',
-        subtitle:'Test subtitle',
-        title: 'Test title',
+        isLoading: false,
         onClick: () => {}
     };
     
@@ -21,7 +19,7 @@ describe('<SomeComponent />', () => {
         const onClickSpy = sinon.spy();
         const wrapper = shallow(<SomeComponent {...props} onClick={onClickSpy} />);
 
-        wrapper.find('div').first().simulate('click');
+        wrapper.find('button').first().simulate('click');
 
         expect(onClickSpy.called).toBe(true);
     });

@@ -8,10 +8,10 @@ describe('main reducer', () => {
         });
     });
 
-    it('should handle IS_LOADING', () => {
+    it('should handle SET_LOADING', () => {
         expect(
             main([], {
-                type: actionTypes.IS_LOADING,
+                type: actionTypes.SET_LOADING,
                 loading: true
             })
         ).toEqual({
